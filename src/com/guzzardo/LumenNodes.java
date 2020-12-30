@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 public class LumenNodes {
 
-    public HashMap <Integer,  ArrayList<Node>> treeList = new HashMap<>();
-    public ArrayList<Node> siblings;
+    private final HashMap <Integer,  ArrayList<Node>> treeList = new HashMap<>();
+    private ArrayList<Node> siblings;
     private Integer currentParent;
 
     public void listChildren() {
@@ -29,7 +29,7 @@ public class LumenNodes {
         }
     }
 
-    private class Node {
+    private static class Node {
         Integer parentId;
         Integer nodeId;
         String nodeName;
